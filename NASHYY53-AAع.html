@@ -1,0 +1,1145 @@
+`html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#090A0F">
+    <meta name="color-scheme" content="dark">
+    <title>NASHYY53 | ستريمر وصانع محتوى ألعاب</title>
+    <meta name="description" content="الموقع الرسمي للستريمر خالد ناشي NASHYY53 - بثوث مباشرة على Kick وتحديات ببجي موبايل و GTA V يومياً.">
+    
+    <!-- إعدادات رابط الموقع الرسمي ومعاينات المشاركة (Canonical, Open Graph & Twitter Cards) -->
+    <link rel="canonical" href="https://link.nashyy53.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://link.nashyy53.com" />
+    <meta property="og:site_name" content="NASHYY53" />
+    <meta property="og:title" content="NASHYY53 | ستريمر وصانع محتوى ألعاب" />
+    <meta property="og:description" content="تابع البث المباشر على Kick وأقوى تحديات ببجي موبايل و GTA V يومياً مع خالد ناشي (NASHYY53)!" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://link.nashyy53.com" />
+    <meta name="twitter:title" content="NASHYY53 | ستريمر وصانع محتوى ألعاب" />
+    <meta name="twitter:description" content="تابع البث المباشر على Kick وأقوى تحديات ببجي موبايل و GTA V يومياً مع خالد ناشي (NASHYY53)!" />
+    
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- خطوط جوجل: Cairo & Tajawal للعربية، و Orbitron & Rajdhani & Inter للإنجليزية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@700;800;900&family=Rajdhani:wght@600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- إعدادات Tailwind المخصصة -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: '#090A0F',
+                        cardDark: '#12151E',
+                        kickGreen: '#53FC18',
+                        pubgGold: '#F59E0B',
+                        gtaPink: '#EC4899',
+                        gtaCyan: '#06B6D4',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2.5s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 15px rgba(83, 252, 24, 0.3), 0 0 30px rgba(83, 252, 24, 0.1)' },
+                            '100%': { boxShadow: '0 0 25px rgba(83, 252, 24, 0.7), 0 0 50px rgba(83, 252, 24, 0.3)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* تنسيقات أساسية وتبديل الخطوط تلقائياً حسب اللغة */
+        body {
+            background-color: #090A0F;
+            color: #f8fafc;
+            overflow-x: hidden;
+            transition: font-family 0.2s ease;
+        }
+
+        html[lang="ar"] body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        html[lang="en"] body {
+            font-family: 'Inter', sans-serif;
+        }html[lang="en"] .heading-font {
+            font-family: 'Rajdhani', sans-serif;
+            letter-spacing: 0.02em;
+        }
+
+        /* شبكة خلفية هندسية خفيفة */
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(83, 252, 24, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(83, 252, 24, 0.04) 1px, transparent 1px);
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+        }
+
+        /* تأثير الزجاج المعتم (Glassmorphism) */
+        .glass-card {
+            background: rgba(18, 21, 30, 0.78);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* تدرج نصي نيون */
+        .text-gradient-kick {
+            background: linear-gradient(135deg, #ffffff 20%, #53FC18 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* شريط التمرير المخصص */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090A0F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #53FC18;
+        }
+
+        /* Premium interaction layer */
+        :root { color-scheme: dark; scroll-padding-top: 88px; }
+        body { background-image: radial-gradient(circle at 50% -15%, rgba(83,252,24,.075), transparent 38%); }
+        a, button { -webkit-tap-highlight-color: transparent; }
+        button:focus-visible, a:focus-visible {
+            outline: 2px solid #53FC18; outline-offset: 4px; border-radius: 12px;
+        }
+        .top-progress {
+            position:absolute; inset-inline-start:0; bottom:0; height:2px; width:0;
+            background:linear-gradient(90deg,#06b6d4,#53fc18);
+            box-shadow:0 0 12px rgba(83,252,24,.65); z-index:5;
+        }
+        .mobile-menu {
+            display:grid; grid-template-rows:0fr; opacity:0; visibility:hidden;
+            transition:grid-template-rows .35s ease, opacity .25s ease, visibility .25s;
+        }
+        .mobile-menu.is-open { grid-template-rows:1fr; opacity:1; visibility:visible; }
+        .mobile-menu-inner { overflow:hidden; }
+        .mobile-menu a { display:block; padding:12px 14px; border-radius:12px; color:#cbd5e1; font-weight:700; }
+        .mobile-menu a:hover { color:#53FC18; background:rgba(255,255,255,.05); }
+        .reveal { opacity:0; transform:translateY(26px) scale(.985); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.75,.2,1); }
+        .reveal.is-visible { opacity:1; transform:translateY(0) scale(1); }
+        .reveal-delay-1 { transition-delay:.08s; }
+        .reveal-delay-2 { transition-delay:.16s; }
+        .reveal-delay-3 { transition-delay:.24s; }
+        .interactive-card { transform-style:preserve-3d; will-change:transform; }
+        .interactive-card::after {
+            content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+            background:linear-gradient(120deg,rgba(255,255,255,.07),transparent 35%,transparent 70%,rgba(83,252,24,.045));
+            opacity:0; transition:opacity .3s ease;
+        }
+        .interactive-card:hover::after { opacity:1; }
+        .back-to-top {
+            opacity:0; visibility:hidden; transform:translateY(12px) scale(.92);
+            transition:all .25s ease;
+        }
+        .back-to-top.is-visible { opacity:1; visibility:visible; transform:translateY(0) scale(1); }
+        .section-kicker { letter-spacing:.16em; text-transform:uppercase; color:#53FC18; font:700 10px 'Orbitron',sans-serif; }
+        .hero-orbit { position:absolute; inset:-14px; border:1px solid rgba(83,252,24,.18); border-radius:50%; animation:orbit-spin 18s linear infinite; }
+        .hero-orbit::before { content:""; position:absolute; top:16%; left:10%; width:7px; height:7px; border-radius:50%; background:#53FC18; box-shadow:0 0 14px #53FC18; }
+        @keyframes orbit-spin { to { transform:rotate(360deg); } }
+        @keyframes soft-shine { 0%,100% { background-position:0% 50%; } 50% { background-position:100% 50%; } }
+        .text-gradient-kick { background-size:180% 180%; animation:soft-shine 7s ease infinite; }
+        #toast { max-width:calc(100vw - 28px); }
+        #toastMessage { white-space:normal; text-align:center; }
+        @media (hover:hover) and (pointer:fine) {
+            .interactive-card { transition:transform .25s ease, border-color .3s ease, box-shadow .3s ease; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+            .reveal { opacity:1; transform:none; }
+        }
+
+
+        /* Smooth premium motion outside the original game zone */
+        html { scroll-behavior:smooth; }
+        body { -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+        #links .group, #support .relative, header a, header button, footer a {
+            transition-property:transform, opacity, color, background-color, border-color, box-shadow;
+            transition-duration:.28s;
+            transition-timing-function:cubic-bezier(.2,.75,.25,1);
+        }
+        #links .group:hover, #support .relative:hover { transform:translateY(-3px); }
+        button:active, a:active { transform:scale(.98); }
+        @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+        /* NASHYY53 3D motion suite */
+        .hero-3d-stage{position:relative;isolation:isolate;perspective:1000px;transform-style:preserve-3d;overflow:visible;transition:transform .22s cubic-bezier(.2,.7,.2,1)}
+        .hero-3d-stage::before{content:"";position:absolute;z-index:-2;width:280px;height:280px;left:50%;top:50%;transform:translate(-50%,-50%) translateZ(-90px);border-radius:50%;background:radial-gradient(circle,rgba(83,252,24,.14),rgba(83,252,24,.025) 48%,transparent 70%);filter:blur(10px);pointer-events:none}
+        .floating-3d{position:absolute;z-index:-1;pointer-events:none;transform-style:preserve-3d;filter:drop-shadow(0 16px 22px rgba(0,0,0,.28));animation:float-3d 7s ease-in-out infinite}
+        .floating-3d.cube{width:38px;height:38px;border:1px solid rgba(83,252,24,.55);background:linear-gradient(135deg,rgba(83,252,24,.18),rgba(83,252,24,.015));box-shadow:inset 0 0 22px rgba(83,252,24,.12),0 0 22px rgba(83,252,24,.08);border-radius:9px;backdrop-filter:blur(5px)}
+        .floating-3d.ring{width:72px;height:72px;border:1px solid rgba(168,85,247,.55);border-radius:50%;box-shadow:0 0 25px rgba(168,85,247,.14),inset 0 0 18px rgba(168,85,247,.1);animation:float-3d 9s ease-in-out infinite,ring-spin 13s linear infinite}
+        .floating-3d.diamond{width:22px;height:22px;border:1px solid rgba(255,255,255,.55);background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.015));transform:rotate(45deg);border-radius:5px;animation:diamond-drift 8s ease-in-out infinite}
+        @keyframes float-3d{0%,100%{translate:0 0;rotate:0 1 0 -8deg}50%{translate:0 -18px;rotate:1 1 0 12deg}}
+        @keyframes ring-spin{to{rotate:1 1 0 360deg}}
+        @keyframes diamond-drift{0%,100%{translate:0 0;rotate:45deg}50%{translate:0 -15px;rotate:135deg}}
+        .card-3d{position:relative;transform-style:preserve-3d;transition:transform .18s ease,box-shadow .3s ease,border-color .3s ease;will-change:transform}
+        .card-3d::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;z-index:2;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.18),transparent 42%);transition:opacity .25s ease}
+        .card-3d:hover::before{opacity:1}
+        .card-3d:hover{box-shadow:0 22px 55px rgba(0,0,0,.28),0 0 25px rgba(83,252,24,.08)}
+        .card-3d>*{transform:translateZ(12px)}
+        .btn-3d{transform:translateZ(0);transition:transform .2s ease,filter .2s ease}
+        .btn-3d:hover{transform:translateY(-3px) scale(1.025);filter:drop-shadow(0 10px 18px rgba(83,252,24,.15))}
+        .btn-3d:active{transform:translateY(0) scale(.97)}
+        .cursor-glow{position:fixed;width:260px;height:260px;border-radius:50%;pointer-events:none;z-index:0;opacity:0;mix-blend-mode:screen;background:radial-gradient(circle,rgba(83,252,24,.06),transparent 68%);transform:translate(-50%,-50%);transition:opacity .3s ease}
+        @media (hover:hover) and (pointer:fine){body:hover .cursor-glow{opacity:1}}
+        @media (max-width:767px){.floating-3d{opacity:.58;scale:.78}.hero-3d-stage::before{width:210px;height:210px}}
+        @media (prefers-reduced-motion:reduce){.floating-3d,.hero-orbit{animation:none!important}.hero-3d-stage,.card-3d,.btn-3d{transition:none!important;transform:none!important}.cursor-glow{display:none!important}}
+
+    </style>
+</head>
+<body class="min-h-screen relative selection:bg-kickGreen selection:text-obsidian">
+    <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- خلفية الكانفاس للجسيمات المتحركة -->
+    <canvas id="particlesCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+    <!-- طبقة الشبكة والإضاءات المحيطية -->
+    <div class="fixed inset-0 cyber-grid pointer-events-none z-0"></div>
+    <div class="fixed top-[-10%] right-[-10%] w-96 h-96 bg-kickGreen/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-[10%] left-[-10%] w-96 h-96 bg-purple-600/15 rounded-full blur-[130px] pointer-events-none z-0"></div>
+
+    <!-- شريط التنقل العلوي (Navbar) -->
+    <header class="sticky top-0 z-40 glass-card border-b border-white/5 relative">
+        <div id="topProgress" class="top-progress" aria-hidden="true"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
+            <!-- الشعار -->
+            <a href="#home" class="flex items-center gap-2.5 group shrink-0 card-3d">
+                <div class="w-9 h-9 rounded-xl bg-kickGreen/10 border border-kickGreen/40 flex items-center justify-center group-hover:bg-kickGreen group-hover:text-obsidian transition-all duration-300 card-3d">
+                    <span class="font-orbitron font-black text-kickGreen group-hover:text-obsidian text-sm card-3d">N53</span>
+                </div>
+                <span class="font-orbitron font-extrabold text-base sm:text-lg tracking-wider text-white group-hover:text-kickGreen transition-colors card-3d">
+                    NASHYY53
+                </span>
+            </a>
+
+            <!-- روابط التنقل السريعة (تظهر في الشاشات المتوسطة والكبيرة) -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-bold text-slate-300">
+                <a href="#home" data-i18n="navHome" class="hover:text-kickGreen transition-colors">الرئيسية</a>
+                <a href="#games" data-i18n="navGames" class="hover:text-kickGreen transition-colors">الألعاب</a>
+                <a href="#links" data-i18n="navLinks" class="hover:text-kickGreen transition-colors">المنصات</a>
+                <a href="#support" data-i18n="navSupport" class="hover:text-kickGreen transition-colors">الدعم</a>
+            </nav>
+
+            <button id="mobileMenuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="mobileMenu" onclick="toggleMobileMenu()"
+                class="md:hidden w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-white flex items-center justify-center hover:border-kickGreen/50 transition-all">
+                <svg id="mobileMenuIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- أزرار التحكم (تبديل اللغة + مشاركة + دعم سريع) -->
+            <div class="flex items-center gap-2"><!-- زر تبديل اللغة AR / EN -->
+                <button id="langToggleBtn" onclick="toggleLanguage()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/5 hover:bg-kickGreen/15 border border-white/15 hover:border-kickGreen/50 text-xs sm:text-sm font-bold text-white transition-all active:scale-95 btn-3d" title="Switch Language / تغيير اللغة">
+                    <svg class="w-4 h-4 text-kickGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                    </svg>
+                    <span id="langToggleText" class="font-orbitron text-xs tracking-wider">EN</span>
+                </button>
+
+                <!-- زر المشاركة -->
+                <button onclick="shareProfile()" class="px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm font-bold text-slate-200 transition-all active:scale-95 flex items-center gap-1.5" title="Share Website / مشاركة الموقع">
+                    <svg class="w-4 h-4 text-kickGreen shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                    </svg>
+                    <span data-i18n="navShare">مشاركة الموقع</span>
+                </button>
+
+                <!-- زر الدعم السريع -->
+                <a href="#support" class="flex items-center gap-1 px-3 py-2 rounded-xl bg-kickGreen/15 hover:bg-kickGreen/25 border border-kickGreen/40 text-xs sm:text-sm font-bold text-kickGreen transition-all active:scale-95">
+                    <span data-i18n="navDonate">ادعم البث</span>
+                    <span>💚</span>
+                </a>
+            </div>
+        </div>
+        <nav id="mobileMenu" class="mobile-menu md:hidden border-t border-white/5 px-4" aria-label="Mobile navigation">
+            <div class="mobile-menu-inner">
+                <div class="max-w-5xl mx-auto py-3 grid grid-cols-2 gap-2 text-sm">
+                    <a href="#home" data-i18n="navHome" onclick="closeMobileMenu()">الرئيسية</a>
+                    <a href="#games" data-i18n="navGames" onclick="closeMobileMenu()">الألعاب</a>
+                    <a href="#links" data-i18n="navLinks" onclick="closeMobileMenu()">المنصات</a>
+                    <a href="#support" data-i18n="navSupport" onclick="closeMobileMenu()">الدعم</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-20 space-y-16">
+
+        <!-- 1. قسم الهيرو (Hero Section) -->
+        <section id="home" class="text-center flex flex-col items-center pt-2">
+            <!-- أفاتار الستريمر مع حلقة نيون وشارة البث -->
+            <div class="relative mb-7 animate-float">
+                <!-- هالة إضاءة خلفية -->
+                <div class="absolute -inset-2 rounded-full bg-gradient-to-tr from-kickGreen via-emerald-400 to-purple-600 opacity-60 blur-lg animate-pulse-slow"></div>
+                
+                <!-- إطار الشعار المخصص -->
+                <div id="hero3DObjects" aria-hidden="true">
+                    <span class="floating-3d cube" style="top:16%;left:7%;"></span>
+                    <span class="floating-3d ring" style="top:35%;right:5%;animation-delay:-2s;"></span>
+                    <span class="floating-3d diamond" style="bottom:18%;left:15%;animation-delay:-3s;"></span>
+                    <span class="floating-3d cube" style="bottom:12%;right:14%;width:25px;height:25px;animation-delay:-4s;"></span>
+                </div>
+                <div class="hero-orbit pointer-events-none"></div>
+                <div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full p-1 bg-gradient-to-tr from-kickGreen via-cyan-400 to-purple-500">
+                    <div class="w-full h-full rounded-full bg-obsidian flex items-center justify-center overflow-hidden relative">
+                        <!-- درع وشعار سايبر جيمر مخصص لـ NASHYY53 -->
+                        <svg class="w-full h-full p-3" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="avatarGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#1e293b"/>
+                                    <stop offset="100%" stop-color="#090A0F"/>
+                                </linearGradient>
+                                <linearGradient id="neonStroke" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#53FC18"/><stop offset="100%" stop-color="#06B6D4"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="95" fill="url(#avatarGrad)"/>
+                            <!-- قوس السماعة -->
+                            <path d="M45 105C45 70 68 45 100 45C132 45 155 70 155 105" stroke="url(#neonStroke)" stroke-width="8" stroke-linecap="round"/>
+                            <rect x="34" y="88" width="16" height="38" rx="8" fill="#53FC18"/>
+                            <rect x="150" y="88" width="16" height="38" rx="8" fill="#53FC18"/>
+                            <!-- نظارة تكتيكية -->
+                            <path d="M62 92H138L132 114H106L100 107L94 114H68L62 92Z" fill="#53FC18" fill-opacity="0.2" stroke="#53FC18" stroke-width="3"/>
+                            <!-- رقم 53 -->
+                            <text x="100" y="152" text-anchor="middle" fill="#ffffff" font-family="Orbitron, sans-serif" font-weight="900" font-size="26" letter-spacing="2">53</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- شارة البث المباشر -->
+                <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-obsidian border border-kickGreen px-3.5 py-1 rounded-full flex items-center gap-2 shadow-[0_0_15px_rgba(83,252,24,0.4)]">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-kickGreen opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-kickGreen"></span>
+                    </span>
+                    <span data-i18n="liveBadge" class="text-[11px] font-extrabold tracking-wider text-kickGreen">تابعني على Kick</span>
+                </div>
+            </div>
+
+            <!-- اسم الستريمر -->
+            <h1 class="font-orbitron text-4xl sm:text-6xl font-black tracking-wider text-gradient-kick mt-2 mb-1 drop-shadow-sm">
+                NASHYY53
+            </h1>
+            <p data-i18n="streamerRealName" class="text-xs sm:text-sm font-bold tracking-widest uppercase text-slate-400 mb-4">
+                خالد ناشي • KHALED NASHY
+            </p>
+
+            <!-- النبذة التعريفية -->
+            <p data-i18n="heroSubtitle" class="text-base sm:text-xl text-slate-300 max-w-xl mx-auto leading-relaxed mb-8 px-2">
+                ستريمر وصانع محتوى ألعاب <span class="text-kickGreen font-bold">|</span> تحديات <span class="text-amber-400 font-bold">ببجي موبايل</span> وأكشن <span class="text-pink-400 font-bold">GTA V</span> يومياً بأجواء حماسية!
+            </p>
+
+            <!-- أزرار الدعوة لاتخاذ إجراء (Primary & Secondary CTAs) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
+                <!-- الزر الأساسي: Kick -->
+                <a href="https://kick.com/nashyy53" target="_blank" rel="noopener noreferrer" 
+                   class="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-kickGreen text-obsidian font-black text-base sm:text-lg animate-glow hover:scale-[1.03] active:scale-95 transition-all duration-200 card-3d">
+                    <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
+                        <path d="M3 3h6v6h3V6h3V3h6v6h-3v3h-3v3h3v3h3v6h-6v-3h-3v-3H9v6H3V3z"/>
+                    </svg>
+                    <span data-i18n="heroPrimaryCta">شاهد البث المباشر على Kick</span>
+                </a>
+
+                <!-- الزر الثانوي: الانتقال للمنصات -->
+                <a href="#links" 
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl glass-card hover:bg-white/10 border border-white/15 text-white font-bold text-sm sm:text-base transition-all active:scale-95"><span data-i18n="heroSecondaryCta">جميع المنصات والروابط</span>
+                    <svg class="w-4 h-4 text-kickGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                    </svg>
+                </a>
+
+                <!-- زر مشاركة رابط الموقع الرسمي -->
+                <button onclick="shareProfile()" 
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-4 rounded-2xl bg-kickGreen/10 hover:bg-kickGreen/20 border border-kickGreen/35 text-kickGreen font-bold text-sm sm:text-base transition-all active:scale-95 btn-3d">
+                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                    </svg>
+                    <span data-i18n="heroShareCta">مشاركة الموقع</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- 2. قسم المحتوى والألعاب (Featured Games Section) -->
+        <section id="games" class="space-y-6">
+            <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-3">
+                    <div class="w-1.5 h-7 bg-kickGreen rounded-full"></div>
+                    <h2 data-i18n="gamesTitle" class="heading-font text-2xl sm:text-3xl font-extrabold text-white">المحتوى والألعاب</h2>
+                </div>
+                <span data-i18n="gamesTag" class="text-xs sm:text-sm text-slate-400 font-medium bg-white/5 px-3 py-1 rounded-full border border-white/5">بثوث ومقاطع يومية</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- بطاقة PUBG Mobile -->
+                <div class="group relative rounded-3xl overflow-hidden glass-card p-6 sm:p-7 border border-amber-500/20 hover:border-amber-400/60 transition-all duration-300 hover:-translate-y-1">
+                    <!-- خلفية HUD تكتيكية خفيفة -->
+                    <div class="absolute -top-12 -left-12 w-40 h-40 bg-amber-500/15 rounded-full blur-2xl group-hover:bg-amber-500/25 transition-all"></div>
+                    <svg class="absolute bottom-3 end-3 w-28 h-28 text-amber-500/[0.06] pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                        <circle cx="50" cy="50" r="40" stroke-width="2" stroke-dasharray="6 4"/>
+                        <circle cx="50" cy="50" r="22" stroke-width="1.5"/>
+                        <line x1="50" y1="0" x2="50" y2="100" stroke-width="1"/>
+                        <line x1="0" y1="50" x2="100" y2="50" stroke-width="1"/>
+                    </svg>
+                    
+                    <div class="relative z-10 flex flex-col h-full justify-between space-y-5">
+                        <div class="flex items-start justify-between">
+                            <div class="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="8" stroke-width="2"/>
+                                    <line x1="12" y1="2" x2="12" y2="6" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="12" x2="6" y2="12" stroke-width="2" stroke-linecap="round"/>
+                                    <line x1="18" y1="12" x2="22" y2="12" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 font-orbitron">
+                                BATTLE ROYALE
+                            </span>
+                        </div>
+
+                        <div>
+                            <h3 data-i18n="pubgTitle" class="heading-font text-xl sm:text-2xl font-black text-white mb-2 group-hover:text-amber-400 transition-colors">
+                                ببجي موبايل (PUBG MOBILE)
+                            </h3>
+                            <p data-i18n="pubgDesc" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                جيم بلاي احترافي، كلاتشات حاسمة، وتحديات سكواد                             </p>
+                        </div>
+
+                        <div class="pt-2 flex items-center gap-2 text-xs font-bold text-amber-400">
+                            <span data-i18n="pubgFooter">🔥 رومات وتحديات تفاعلية مع المتابعين</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- بطاقة GTA V / Roleplay -->
+                <div class="group relative rounded-3xl overflow-hidden glass-card p-6 sm:p-7 border border-pink-500/20 hover:border-cyan-400/60 transition-all duration-300 hover:-translate-y-1">
+                    <!-- خلفية نيون فايس -->
+                    <div class="absolute -top-12 -left-12 w-40 h-40 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 rounded-full blur-2xl group-hover:opacity-90 transition-all"></div>
+                    <svg class="absolute bottom-3 end-3 w-28 h-28 text-cyan-400/[0.06] pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                        <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" stroke-width="2"/>
+                        <polygon points="50,20 80,35 80,65 50,80 20,65 20,35" stroke-width="1.5" stroke-dasharray="4 4"/>
+                    </svg>
+                    
+                    <div class="relative z-10 flex flex-col h-full justify-between space-y-5">
+                        <div class="flex items-start justify-between">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500/20 to-cyan-500/20 border border-pink-500/30 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-pink-500/10 text-pink-400 border border-pink-500/20 font-orbitron">
+                                ACTION & RP
+                            </span>
+                        </div>
+
+                        <div>
+                            <h3 data-i18n="gtaTitle" class="heading-font text-xl sm:text-2xl font-black text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                                جراند ثيفت أوتو (GTA V)
+                            </h3>
+                            <p data-i18n="gtaDesc" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                مغامرات، سرقات ومهمات كبرى، وأقوى المواقف الكوميدية والأكشن في عالم مفتوح مليء بالإثارة.
+                            </p>
+                        </div>
+                                    <line x1="12" y1="18" x2="12" y2="22" stroke-width="2" stroke-linecap="round"/><div class="pt-2 flex items-center gap-2 text-xs font-bold text-cyan-400">
+                            <span data-i18n="gtaFooter">⚡ سباقات، مهمات، وحياة واقعية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. قسم روابط التواصل والمنصات (Official Social & Streaming Links Hub) -->
+        <section id="links" class="space-y-6">
+            <p class="section-kicker" data-i18n="linksEyebrow">CONNECT WITH ME</p>
+            <div class="flex items-center gap-3">
+                <div class="w-1.5 h-7 bg-kickGreen rounded-full"></div>
+                <h2 data-i18n="linksTitle" class="heading-font text-2xl sm:text-3xl font-extrabold text-white">روابط التواصل والمنصات</h2>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4">
+                
+                <!-- رابط Kick (مميز باللون الأخضر النيون) -->
+                <div class="group relative rounded-2xl glass-card border-2 border-kickGreen/60 bg-gradient-to-l from-kickGreen/10 via-cardDark to-cardDark p-4 sm:p-5 flex items-center justify-between gap-3 shadow-[0_0_20px_rgba(83,252,24,0.12)] hover:shadow-[0_0_28px_rgba(83,252,24,0.28)] transition-all card-3d">
+                    <a href="https://kick.com/nashyy53" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 flex-1 min-w-0">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-kickGreen text-obsidian flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-transform card-3d">
+                            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                                <path d="M3 3h6v6h3V6h3V3h6v6h-3v3h-3v3h3v3h3v6h-6v-3h-3v-3H9v6H3V3z"/>
+                            </svg>
+                        </div>
+                        <div class="truncate">
+                            <div class="flex items-center gap-2">
+                                <h3 data-i18n="kickTitle" class="font-bold text-base sm:text-lg text-white group-hover:text-kickGreen transition-colors truncate card-3d">البث المباشر - Kick</h3>
+                                <span data-i18n="kickBadge" class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-black bg-kickGreen text-obsidian rounded-md uppercase">الأساسي</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-400 truncate font-orbitron">kick.com/nashyy53</p>
+                        </div>
+                    </a>
+
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button onclick="copyLink('https://kick.com/nashyy53', 'toastKick')" class="p-2.5 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-colors" title="Copy Link">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                        </button>
+                        <a href="https://kick.com/nashyy53" target="_blank" rel="noopener noreferrer" data-i18n="btnWatch" class="px-4 py-2.5 rounded-xl bg-kickGreen text-obsidian font-bold text-xs sm:text-sm hover:brightness-110 transition-all">
+                            مشاهدة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- رابط TikTok -->
+                <div class="group rounded-2xl glass-card border border-white/10 hover:border-pink-500/50 p-4 sm:p-5 flex items-center justify-between gap-3 transition-all hover:bg-white/[0.03] card-3d">
+                    <a href="https://www.tiktok.com/@khalednashy53?_r=1&_t=ZS-9Bb26XPwZcr" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 flex-1 min-w-0"><div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white/5 border border-white/10 text-white flex items-center justify-center shrink-0 group-hover:border-pink-500/50 group-hover:text-pink-400 transition-all card-3d">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                            </svg>
+                        </div>
+                        <div class="truncate">
+                            <h3 data-i18n="tiktokTitle" class="font-bold text-base sm:text-lg text-white group-hover:text-pink-400 transition-colors truncate card-3d">مقاطع ولقطات - TikTok</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 truncate" dir="ltr">@khalednashy53</p>
+                        </div>
+                    </a>
+
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button onclick="copyLink('https://www.tiktok.com/@khalednashy53?_r=1&_t=ZS-9Bb26XPwZcr', 'toastTiktok')" class="p-2.5 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-colors" title="Copy Link">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                        </button>
+                        <a href="https://www.tiktok.com/@khalednashy53?_r=1&_t=ZS-9Bb26XPwZcr" target="_blank" rel="noopener noreferrer" data-i18n="btnFollow" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-pink-500 hover:text-white text-slate-200 font-bold text-xs sm:text-sm transition-all">
+                            متابعة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- رابط Facebook -->
+                <div class="group rounded-2xl glass-card border border-white/10 hover:border-blue-500/50 p-4 sm:p-5 flex items-center justify-between gap-3 transition-all hover:bg-white/[0.03] card-3d">
+                    <a href="https://www.facebook.com/khaled.nashy.5" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 flex-1 min-w-0">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all card-3d">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+                            </svg>
+                        </div>
+                        <div class="truncate">
+                            <h3 data-i18n="fbTitle" class="font-bold text-base sm:text-lg text-white group-hover:text-blue-400 transition-colors truncate card-3d">الصفحة الرسمية - Facebook</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 truncate">Khaled Nashy</p>
+                        </div>
+                    </a>
+
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button onclick="copyLink('https://www.facebook.com/khaled.nashy.5', 'toastFb')" class="p-2.5 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-colors" title="Copy Link"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                        </button>
+                        <a href="https://www.facebook.com/khaled.nashy.5" target="_blank" rel="noopener noreferrer" data-i18n="btnVisit" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-blue-600 hover:text-white text-slate-200 font-bold text-xs sm:text-sm transition-all">
+                            زيارة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- رابط WhatsApp Channel -->
+                <div class="group rounded-2xl glass-card border border-white/10 hover:border-emerald-500/50 p-4 sm:p-5 flex items-center justify-between gap-3 transition-all hover:bg-white/[0.03] card-3d">
+                    <a href="https://whatsapp.com/channel/0029VazCMZgJpe8kh5rKwB45" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 flex-1 min-w-0">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 group-hover:text-obsidian transition-all card-3d">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="truncate">
+                            <h3 data-i18n="waTitle" class="font-bold text-base sm:text-lg text-white group-hover:text-emerald-400 transition-colors truncate card-3d">قناة الواتساب للإشعارات - WhatsApp</h3>
+                            <p data-i18n="waDesc" class="text-xs sm:text-sm text-slate-400 truncate">اشترك ليصلك إشعار فور بدء البث المباشر</p>
+                        </div>
+                    </a>
+
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button onclick="copyLink('https://whatsapp.com/channel/0029VazCMZgJpe8kh5rKwB45', 'toastWa')" class="p-2.5 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-colors" title="Copy Link">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                        </button>
+                        <a href="https://whatsapp.com/channel/0029VazCMZgJpe8kh5rKwB45" target="_blank" rel="noopener noreferrer" data-i18n="btnJoin" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-emerald-500 hover:text-obsidian text-slate-200 font-bold text-xs sm:text-sm transition-all">
+                            انضمام
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- 4. قسم الدعم (Support / Donation Section - InstaPay) -->
+        <section id="support" class="pt-4">
+            <p class="section-kicker text-center mb-3" data-i18n="supportEyebrow">POWER THE NEXT LEVEL</p>
+            <div class="relative rounded-3xl overflow-hidden p-[1px] bg-gradient-to-r from-purple-500 via-kickGreen to-amber-500 shadow-2xl">
+                <div class="bg-[#0f121a] rounded-[23px] p-6 sm:p-10 text-center relative overflow-hidden">
+                    <!-- إضاءة خلفية ناعمة -->
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-kickGreen/15 blur-3xl pointer-events-none"></div>
+
+                    <div class="relative z-10 max-w-xl mx-auto space-y-5">
+                        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-kickGreen/10 border border-kickGreen/30 text-2xl mb-1">
+                            💚
+                        </div>
+
+                        <h2 data-i18n="supportTitle" class="heading-font text-2xl sm:text-3xl font-black text-white">
+                            ادعم تطوير البث والمحتوى 💚
+                        </h2>
+
+                        <p data-i18n="supportDesc" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            دعمك المادي يساعدنا في تطوير جودة البث، تجهيز المعدات، وتنظيم بطولات وجوائز أكثر للمتابعين. شكراً من القلب لكل داعم!
+                        </p>
+
+                        <!-- أزرار الدعم عبر InstaPay -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
+                            <!-- زر الرابط المباشر -->
+                            <a href="https://ipn.eg/S/nashy2000/instapay/3qslNJ" target="_blank" rel="noopener noreferrer" 
+                               class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-purple-600/25 hover:scale-[1.02] active:scale-95 transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span data-i18n="instapayBtn">الدعم المباشر عبر InstaPay</span>
+                            </a>
+
+                            <!-- زر نسخ عنوان InstaPay -->
+                            <button onclick="copyLink('nashy2000@instapay', 'toastInstapay')" 
+                                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/15 text-slate-200 font-medium text-sm transition-all active:scale-95" title="Copy InstaPay Address">
+                                <span class="font-orbitron text-xs sm:text-sm text-kickGreen" dir="ltr">nashy2000@instapay</span>
+                                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- الفوتر (Footer) -->
+    <footer class="relative z-10 border-t border-white/10 bg-obsidian/85 backdrop-blur-md py-8"><div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+            <div class="font-orbitron font-black text-lg tracking-widest text-white/90">
+                NASHYY<span class="text-kickGreen">53</span>
+            </div>
+            
+            <!-- شريط نسخ ومشاركة الرابط الرسمي للموقع -->
+            <div class="flex justify-center">
+                <button onclick="shareProfile()" class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/5 hover:bg-kickGreen/15 border border-white/10 hover:border-kickGreen/40 text-xs sm:text-sm text-slate-300 hover:text-white transition-all active:scale-95 btn-3d">
+                    <span data-i18n="footerShareLabel" class="font-bold">مشاركة الموقع:</span>
+                    <span class="font-orbitron text-kickGreen tracking-wide" dir="ltr">https://link.nashyy53.com</span>
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- روابط سريعة في الفوتر -->
+            <div class="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm text-slate-400">
+                <a href="#home" data-i18n="navHome" class="hover:text-kickGreen transition-colors">الرئيسية</a>
+                <span>•</span>
+                <a href="#games" data-i18n="navGames" class="hover:text-kickGreen transition-colors">الألعاب</a>
+                <span>•</span>
+                <a href="#links" data-i18n="navLinks" class="hover:text-kickGreen transition-colors">المنصات</a>
+                <span>•</span>
+                <a href="#support" data-i18n="navSupport" class="hover:text-kickGreen transition-colors">الدعم</a>
+            </div>
+
+            <p data-i18n="footerCopyright" class="text-xs sm:text-sm text-slate-500">
+                جميع الحقوق محفوظة © 2026 RK.M
+            </p>
+        </div>
+    </footer>
+
+    <button id="backToTop" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="back-to-top fixed bottom-6 right-5 sm:right-8 z-40 w-11 h-11 rounded-2xl glass-card border border-kickGreen/35 text-kickGreen shadow-xl flex items-center justify-center"
+        aria-label="Back to top" title="Back to top">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m6 14 6-6 6 6"/>
+        </svg>
+    </button>
+
+    <!-- إشعار منبثق (Toast Notification) -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300">
+        <div class="glass-card border border-kickGreen/60 bg-obsidian/95 text-white px-5 py-3 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.8)] flex items-center gap-3">
+            <div class="w-6 h-6 rounded-full bg-kickGreen/20 text-kickGreen flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+            </div>
+            <span id="toastMessage" class="text-sm font-bold text-slate-100 whitespace-nowrap">تم النسخ بنجاح!</span>
+        </div>
+    </div>
+
+    <!-- كود الجافاسكريبت للترجمة الفورية، التفاعلات، والخلفية المتحركة -->
+    <script>
+        // الرابط الرسمي للموقع
+        const OFFICIAL_SITE_URL = "https://link.nashyy53.com";
+
+        // الحصول على عنوان الصفحة الفعلي عند النشر، مع رابط احتياطي للدومين الرسمي.
+        function getShareUrl() {
+            return window.location.protocol === 'http:' || window.location.protocol === 'https:'
+                ? window.location.href.split('#')[0]
+                : OFFICIAL_SITE_URL;
+        }
+
+        // 1. قاموس الترجمة الشامل (عربي / إنجليزي)
+        const translations = {
+            ar: {
+                pageTitle: "NASHYY53 | ستريمر وصانع محتوى ألعاب",
+                toggleLabel: "EN",
+                navHome: "الرئيسية",
+                navGames: "الألعاب",
+                navLinks: "المنصات",
+                navSupport: "الدعم",
+                navShare: "مشاركة الموقع",
+                navDonate: "ادعم البث",
+                liveBadge: "تابعني على Kick",
+                streamerRealName: "خالد ناشي • KHALED NASHY",
+                heroSubtitle: 'ستريمر وصانع محتوى ألعاب <span class="text-kickGreen font-bold">|</span> تحديات <span class="text-amber-400 font-bold">ببجي موبايل</span> وأكشن <span class="text-pink-400 font-bold">GTA V</span> يومياً بأجواء حماسية!',heroPrimaryCta: "شاهد البث المباشر على Kick",
+                heroSecondaryCta: "جميع المنصات والروابط",
+                heroShareCta: "مشاركة الموقع",
+                gamesEyebrow: "منطقة الألعاب",
+                linksEyebrow: "تابعني على المنصات",
+                supportEyebrow: "دعمك يصنع الفرق",
+                gamesTitle: "المحتوى والألعاب",
+                gamesTag: "بثوث ومقاطع يومية",
+                pubgTitle: "ببجي موبايل (PUBG MOBILE)",
+                pubgDesc: "جيم بلاي احترافي، كلاتشات حاسمة، وتحديات سكواد.",
+                pubgFooter: "🔥 رومات وتحديات تفاعلية مع المتابعين",
+                gtaTitle: "جراند ثيفت أوتو (GTA V)",
+                gtaDesc: "مغامرات، سرقات ومهمات كبرى، وأقوى المواقف الكوميدية والأكشن في عالم مفتوح مليء بالإثارة.",
+                gtaFooter: "⚡️ سباقات، مهمات، وحياة واقعية",
+                linksTitle: "روابط التواصل والمنصات",
+                kickTitle: "البث المباشر - Kick",
+                kickBadge: "الأساسي",
+                tiktokTitle: "مقاطع ولقطات - TikTok",
+                fbTitle: "الصفحة الرسمية - Facebook",
+                waTitle: "قناة الواتساب للإشعارات - WhatsApp",
+                waDesc: "اشترك ليصلك إشعار فور بدء البث المباشر",
+                btnWatch: "مشاهدة",
+                btnFollow: "متابعة",
+                btnVisit: "زيارة",
+                btnJoin: "انضمام",
+                supportTitle: "ادعم تطوير البث والمحتوى 💚",
+                supportDesc: "دعمك المادي يساعدنا في تطوير جودة البث، تجهيز المعدات، وتنظيم بطولات وجوائز أكثر للمتابعين. شكراً من القلب لكل داعم!",
+                instapayBtn: "الدعم المباشر عبر InstaPay",
+                footerShareLabel: "مشاركة الموقع:",
+                footerCopyright: "جميع الحقوق محفوظة © 2026 RK.M",
+                toastKick: "تم نسخ رابط قناة Kick!",
+                toastTiktok: "تم نسخ رابط حساب TikTok!",
+                toastFb: "تم نسخ رابط صفحة Facebook!",
+                toastWa: "تم نسخ رابط قناة الواتساب!",
+                toastInstapay: "تم نسخ عنوان InstaPay!",
+                toastShare: "تم نسخ رابط الموقع: https://link.nashyy53.com",
+                toastError: "حدث خطأ أثناء النسخ",
+                shareTitle: "NASHYY53 | ستريمر وصانع محتوى ألعاب",
+                shareText: "تابع البث المباشر وأقوى لقطات ببجي و GTA مع NASHYY53!"
+            },
+            en: {
+                pageTitle: "NASHYY53 | Gaming Streamer & Content Creator",
+                toggleLabel: "عربي",
+                navHome: "Home",
+                navGames: "Games",
+                navLinks: "Links",
+                navSupport: "Support",
+                navShare: "Share Website",
+                navDonate: "Donate",
+                liveBadge: "FOLLOW ON KICK",
+                streamerRealName: "KHALED NASHY • خالد ناشي",
+                heroSubtitle: 'Gaming Streamer & Content Creator <span class="text-kickGreen font-bold">|</span> High-octane <span class="text-amber-400 font-bold">PUBG</span> clutches & <span class="text-pink-400 font-bold">GTA V</span> action daily!',
+                heroPrimaryCta: "Watch Live on Kick",
+                heroSecondaryCta: "All Platforms & Links",
+                heroShareCta: "Share Website",
+                gamesEyebrow: "THE GAME ZONE",
+                linksEyebrow: "CONNECT WITH ME",
+                supportEyebrow: "POWER THE NEXT LEVEL",
+                gamesTitle: "Featured Games",
+                gamesTag: "Daily Streams & Clips",
+                pubgTitle: "PUBG MOBILE",
+                pubgDesc: "Sharp gameplay, clutch moments, and squad challenges with the community.",
+                pubgFooter: "🔥 Custom rooms & viewer challenges",
+                gtaTitle: "GRAND THEFT AUTO V (GTA)",
+                gtaDesc: "Epic heists, roleplay adventures, high-speed chases, and non-stop open-world action & comedy.",
+                gtaFooter: "⚡️ Street races, missions & RP",
+                linksTitle: "Official Social & Streaming Hub",
+                kickTitle: "Live Stream - Kick",
+                kickBadge: "MAIN",
+                tiktokTitle: "Clips & Highlights - TikTok",
+                fbTitle: "Official Page - Facebook",
+                waTitle: "Stream Alerts - WhatsApp Channel",
+                waDesc: "Join to get instant notifications when the stream goes live",
+                btnWatch: "Watch",
+                btnFollow: "Follow",
+                btnVisit: "Visit",
+                btnJoin: "Join",
+                supportTitle: "Support the Stream & Content 💚",
+                supportDesc: "Your support helps upgrade stream quality, gear, and host bigger tournaments & giveaways for the community. Thank you legends!",
+                instapayBtn: "Donate via InstaPay",
+                footerShareLabel: "Share Website:",
+                footerCopyright: "All Rights Reserved © 2026 RK.M",
+                toastKick: "Kick channel link copied!",
+                toastTiktok: "TikTok profile link copied!",
+                toastFb: "Facebook page link copied!",
+                toastWa: "WhatsApp channel link copied!",
+                toastInstapay: "InstaPay address copied!",
+                toastShare: "Website link copied: https://link.nashyy53.com",
+                toastError: "Failed to copy link",
+                shareTitle: "NASHYY53 | Gaming Streamer & Content Creator",
+                shareText: "Watch live streams and epic PUBG & GTA V clips with NASHYY53!"
+            }
+        };
+
+        // الحالة الحالية للغة (استرجاع من localStorage أو الافتراضي 'ar')
+        let currentLang = 'ar';
+        try {
+            const savedLang = localStorage.getItem('nashyy53_lang');
+            if (savedLang === 'ar' || savedLang === 'en') currentLang = savedLang;
+        } catch (err) {
+            console.warn('Language preference storage is unavailable.', err);
+        }
+
+        // دالة تطبيق اللغة وتحديث الاتجاه والنصوص
+        function applyLanguage(lang) {
+            currentLang = lang;
+            try {
+                localStorage.setItem('nashyy53_lang', lang);
+            } catch (err) {
+                console.warn('Could not save language preference.', err);
+            }
+
+            const htmlEl = document.documentElement;
+            htmlEl.setAttribute('lang', lang);
+            htmlEl.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            const dict = translations[lang];
+            document.title = dict.pageTitle;
+            document.getElementById('langToggleText').textContent = dict.toggleLabel;
+
+            // تحديث جميع العناصر التي تحمل سمة data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.innerHTML = dict[key];
+                }
+            });
+        }
+
+        // دالة التبديل بين العربي والإنجليزي
+        function toggleLanguage() {
+            const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+            applyLanguage(nextLang);
+        }
+
+        // 2. نظام الإشعارات (Toast)
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMessage');
+            
+            toastMsg.textContent = message;
+            toast.classList.remove('opacity-0', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-4');
+            }, 3000);
+        }
+
+        // 3. نسخ الروابط بطريقة متوافقة مع المتصفحات الحديثة والقديمة.
+        async function copyLink(text, toastKey) {
+            const dict = translations[currentLang];
+            const successMessage = dict[toastKey] || text;
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(text);
+                } else {
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = text;
+                    tempInput.setAttribute('readonly', '');
+                    tempInput.style.position = 'fixed';
+                    tempInput.style.opacity = '0';
+                    tempInput.style.pointerEvents = 'none';
+                    document.body.appendChild(tempInput);
+                    tempInput.focus();
+                    tempInput.select();
+                    const copied = document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+                    if (!copied) throw new Error('Clipboard copy was rejected');
+                }
+                showToast(successMessage);
+                return true;
+            } catch (err) {
+                console.error('Copy failed:', err);
+                showToast(dict.toastError);
+                return false;
+            }
+        }
+
+        // 4. مشاركة الموقع: قائمة المشاركة على الأجهزة الداعمة، والنسخ كحل بديل.
+        async function shareProfile() {
+            const url = getShareUrl();
+            const dict = translations[currentLang];
+            const shareData = {
+                title: dict.shareTitle,
+                text: dict.shareText,
+                url: url
+            };
+
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                    return;
+                } catch (err) {
+                    // إغلاق المستخدم لقائمة المشاركة ليس خطأ ولا يستدعي النسخ.
+                    if (err && err.name === 'AbortError') return;
+                    console.warn('Native sharing unavailable; using copy fallback.', err);
+                }
+            }
+
+            await copyLink(url, 'toastShare');
+        }
+
+        // القائمة المتنقلة للهاتف
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const button = document.getElementById('mobileMenuBtn');
+            const isOpen = menu.classList.toggle('is-open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+            document.getElementById('mobileMenuIcon').innerHTML = isOpen
+                ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 6 12 12M18 6 6 18"/>'
+                : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+        }
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const button = document.getElementById('mobileMenuBtn');
+            if (!menu || !button) return;
+            menu.classList.remove('is-open');
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-label', 'Open navigation menu');
+            const icon = document.getElementById('mobileMenuIcon');
+            if (icon) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+        }
+
+        // تشغيل الظهور التدريجي مع احترام إعداد تقليل الحركة.
+        function initRevealAnimations() {
+            const revealTargets = [
+                ...document.querySelectorAll('main > section:not(#games)'),
+                ...document.querySelectorAll('#links .grid > div, #support .relative')
+            ];
+            revealTargets.forEach((el, index) => {
+                el.classList.add('reveal');
+                if (index % 3 === 1) el.classList.add('reveal-delay-1');
+                if (index % 3 === 2) el.classList.add('reveal-delay-2');
+            });
+
+            if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                revealTargets.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            revealTargets.forEach(el => observer.observe(el));
+        }
+
+        // ميل خفيف للبطاقات على أجهزة الماوس فقط.
+        function initCardTilt() {
+            if (!window.matchMedia('(hover:hover) and (pointer:fine)').matches ||
+                window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            document.querySelectorAll('#links .group').forEach(card => {
+                card.classList.add('interactive-card');
+                card.addEventListener('pointermove', event => {
+                    const rect = card.getBoundingClientRect();
+                    const x = (event.clientX - rect.left) / rect.width - 0.5;
+                    const y = (event.clientY - rect.top) / rect.height - 0.5;
+                    card.style.transform = `perspective(900px) rotateX(${(-y * 3).toFixed(2)}deg) rotateY(${(x * 3).toFixed(2)}deg) translateY(-3px)`;
+                });
+                card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+            });
+        }
+
+        // تحديث شريط التقدم وزر العودة للأعلى بكلفة حسابية منخفضة.
+        function initScrollUI() {
+            const progress = document.getElementById('topProgress');
+            const backTop = document.getElementById('backToTop');
+            let ticking = false;
+            const update = () => {
+                const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+                const percent = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+                progress.style.width = `${percent}%`;
+                backTop.classList.toggle('is-visible', window.scrollY > 420);
+                ticking = false;
+            };
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(update);
+                    ticking = true;
+                }
+            }, { passive: true });
+            update();
+        }
+
+        // خلفية جسيمات محسّنة: كثافة متجاوبة، DPR محدود، وإيقاف عند إخفاء التبويب.
+        function initParticles() {
+            const canvas = document.getElementById('particlesCanvas');
+            if (!canvas || !canvas.getContext) return;
+            const ctx = canvas.getContext('2d', { alpha: true });
+            if (!ctx) return;
+
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isSmall = window.innerWidth < 640;
+            const particles = [];
+            let width = 0, height = 0, rafId = 0, running = false;
+
+            function resize() {
+                const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = Math.floor(width * dpr);
+                canvas.height = Math.floor(height * dpr);
+                canvas.style.width = width + 'px';
+                canvas.style.height = height + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+            resize();
+            const count = Math.min(48, Math.max(18, Math.floor(width / (isSmall ? 18 : 27))));
+            for (let i = 0; i < count; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    r: Math.random() * 1.4 + .45,
+                    vx: (Math.random() - .5) * .16,
+                    vy: -(Math.random() * .22 + .06),
+                    alpha: Math.random() * .3 + .08,
+                    green: Math.random() > .28
+                });
+            }
+            function draw() {
+                if (!running || document.hidden) return;
+                ctx.clearRect(0, 0, width, height);
+                for (const p of particles) {
+                    p.x += p.vx; p.y += p.vy;
+                    if (p.y < -5) { p.y = height + 5; p.x = Math.random() * width; }
+                    if (p.x < -5) p.x = width + 5;
+                    if (p.x > width + 5) p.x = -5;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.green
+                        ? `rgba(83,252,24,${p.alpha})`
+                        : `rgba(168,85,247,${p.alpha})`;
+                    ctx.fill();
+                }
+                rafId = requestAnimationFrame(draw);
+            }
+            function start() {
+                if (reduceMotion || running || document.hidden) return;
+                running = true;
+                rafId = requestAnimationFrame(draw);
+            }
+            function stop() {
+                running = false;
+                if (rafId) cancelAnimationFrame(rafId);
+            }
+            window.addEventListener('resize', () => { resize(); }, { passive: true });
+            document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+            start();
+        }
+
+        // 3D pointer interactions: hero tilt, cursor glow, and premium card perspective.
+        function init3DInteractions() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+                !window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+            const hero = document.getElementById('hero3DStage');
+            const glow = document.getElementById('cursorGlow');
+
+            if (glow) window.addEventListener('pointermove', event => {
+                glow.style.left = event.clientX + 'px';
+                glow.style.top = event.clientY + 'px';
+            }, {passive:true});
+
+            if (hero) {
+                hero.addEventListener('pointermove', event => {
+                    const r = hero.getBoundingClientRect();
+                    const x = (event.clientX-r.left)/r.width-.5;
+                    const y = (event.clientY-r.top)/r.height-.5;
+                    hero.style.transform = `perspective(1000px) rotateX(${(-y*7).toFixed(2)}deg) rotateY(${(x*8).toFixed(2)}deg)`;
+                });
+                hero.addEventListener('pointerleave', () => {
+                    hero.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+                });
+            }
+
+            document.querySelectorAll('.card-3d').forEach(card => {
+                card.addEventListener('pointermove', event => {
+                    const r = card.getBoundingClientRect();
+                    const x = (event.clientX-r.left)/r.width;
+                    const y = (event.clientY-r.top)/r.height;
+                    card.style.transform = `perspective(850px) rotateX(${((.5-y)*5).toFixed(2)}deg) rotateY(${((x-.5)*5).toFixed(2)}deg) translateY(-3px)`;
+                    card.style.setProperty('--mx', `${x*100}%`);
+                    card.style.setProperty('--my', `${y*100}%`);
+                });
+                card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+            });
+        }
+
+        // تهيئة جميع المزايا بعد جاهزية الصفحة.
+        window.addEventListener('DOMContentLoaded', () => {
+            applyLanguage(currentLang);
+            initRevealAnimations();
+            initCardTilt();
+            initScrollUI();
+            initParticles();
+            init3DInteractions();
+
+            // إغلاق قائمة الهاتف بزر Escape.
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape') closeMobileMenu();
+            });
+            // إغلاقها عند الانتقال إلى عرض سطح المكتب.
+            window.matchMedia('(min-width: 768px)').addEventListener?.('change', event => {
+                if (event.matches) closeMobileMenu();
+            });
+        });
+    </script>
+</body>
+</html>
+`
